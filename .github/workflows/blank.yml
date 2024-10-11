@@ -38,7 +38,7 @@ jobs:
         run: |
           mkdir -p ~/.config/osc/
           cp oscrc ~/.config/osc/oscrc
-          sed -i "s/REPLACEWITHPASSWORD/${PASSWORD}/g;" ~/.config/osc/oscrc
+          sed -i "s/REPLACEMEWITHPASSWORD/${PASSWORD}/g;" ~/.config/osc/oscrc
           osc co home:huakim:matrix
           cd home:huakim:matrix
           ln ../*.sh ./
