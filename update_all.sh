@@ -2,12 +2,9 @@
 
 if [[ -n "${NOUPDATE}" ]]
 then
-updatejob(){
-}
+updatejob(){ :; }
 else
-updatejob(){
- echo fine
-}
+updatejob(){ echo fine ; }
 fi
 
 job(){
