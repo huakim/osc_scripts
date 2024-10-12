@@ -1,20 +1,25 @@
 #!/bin/bash
 
-if [[ -n "${NOUPDATE}" ]]
-then
-updatejob(){ :; }
-else
-updatejob(){ echo fine ; }
-fi
-
 job(){
+if [[ -z "${NOUPDATE}" ]]
+then
 for i in "${@}"
 do
  if [[ -d "$i" ]]
  then
   (
   cd "$i"
-  updatejob
+  osc update
+  )
+ fi
+done
+
+for i in "${@}"
+do
+ if [[ -d "$i" ]]
+ then
+  (
+  cd "$i"
   osc service mr
   osc add *
   osc ci -m update
