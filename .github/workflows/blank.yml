@@ -42,5 +42,4 @@ jobs:
           osc co home:huakim:matrix
           cd home:huakim:matrix
           ln ../*.sh ./
-          . ./update_all.sh
-#          sed -i 'REPLACEMEWITHPASSWORD'
+          bash ./update_all.sh
