@@ -13,6 +13,7 @@ do
   )
  fi
 done
+fi
 
 for i in "${@}"
 do
